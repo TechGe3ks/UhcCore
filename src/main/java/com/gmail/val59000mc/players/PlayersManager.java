@@ -418,7 +418,7 @@ public class PlayersManager{
 			for (UhcPlayer winner : winners) {
 				try {
 					winner.getPlayer().sendTitle("Winner Winner Chicken Dinner", "You have won the game", 1, 10, 1);
-				} catch (UhcPlayerNotOnlineException) {
+				} catch (UhcPlayerNotOnlineException uphoe) {
 					//do nothing
 				}
 			}
