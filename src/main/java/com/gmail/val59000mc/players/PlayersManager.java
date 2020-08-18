@@ -415,15 +415,15 @@ public class PlayersManager{
 		List<UhcPlayer> winners = getWinners();
 
 		if (!winners.isEmpty()) {
-			for (UhcPlayer winner : winners) {
+			UhcPlayer player1 = winners.get(0);
+			
+			for (UhcPlayer winner : player1.getTeam().getMembers()) {
 				try {
-					winner.getPlayer().sendTitle("Winner Winner Chicken Dinner", "You have won the game", 1, 10, 1);
+					winner.getPlayer().sendTitle("Winner Winner Chicken Dinner", "You have won the game", 1, 600, 1);
 				} catch (UhcPlayerNotOnlineException uphoe) {
 					//do nothing
 				}
 			}
-			
-			UhcPlayer player1 = winners.get(0);
 			
 			if (winners.size() == 1) {
 				gm.broadcastInfoMessage(Lang.PLAYERS_WON_SOLO.replace("%player%", player1.getDisplayName()));
