@@ -415,7 +415,12 @@ public class PlayersManager{
 		List<UhcPlayer> winners = getWinners();
 
 		if (!winners.isEmpty()) {
+			for (UhcPlayer winner : winners) {
+				winner.getPlayer().sendTitle("Winner Winner Chicken Dinner", "You have won the game", 1, 10, 1);
+			}
+			
 			UhcPlayer player1 = winners.get(0);
+			
 			if (winners.size() == 1) {
 				gm.broadcastInfoMessage(Lang.PLAYERS_WON_SOLO.replace("%player%", player1.getDisplayName()));
 			} else {
