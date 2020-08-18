@@ -33,7 +33,7 @@ public class UhcCore extends JavaPlugin{
 		loadServerVersion();
 		addBStats();
 		
-		Bukkit.getScheduler().runTaskLater(this, new Runnable(){
+		Bukkit.getScheduler().runTaskLater(this, new Runnable() {
 			
 			@Override
 			public void run() {
@@ -215,8 +215,8 @@ public class UhcCore extends JavaPlugin{
 	@Override
 	public void onDisable(){
 		GameManager.getGameManager().getScenarioManager().disableAllScenarios();
-		
 		updater.runAutoUpdate();
+
 		Bukkit.getLogger().info("[UhcCore] Plugin disabled");
 	}
 
