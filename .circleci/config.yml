@@ -11,7 +11,7 @@ jobs:
           key: v1-gradle-cache-{{ checksum "build.gradle" }}
       - run:
           name: Install dependencies
-          command: ./gradlew build --refresh-dependencies
+          command: ./gradlew install
       - save_cache:
           paths:
             - ~/.gradle/wrapper
