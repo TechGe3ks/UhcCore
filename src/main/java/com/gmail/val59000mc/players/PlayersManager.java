@@ -416,7 +416,11 @@ public class PlayersManager{
 
 		if (!winners.isEmpty()) {
 			for (UhcPlayer winner : winners) {
-				winner.getPlayer().sendTitle("Winner Winner Chicken Dinner", "You have won the game", 1, 10, 1);
+				try {
+					winner.getPlayer().sendTitle("Winner Winner Chicken Dinner", "You have won the game", 1, 10, 1);
+				} catch (UhcPlayerNotOnlineException) {
+					//do nothing
+				}
 			}
 			
 			UhcPlayer player1 = winners.get(0);
