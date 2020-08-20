@@ -49,7 +49,7 @@ allprojects {
         }
         maven {
              name = 'TimoCloud-API-6.0-beta-1.5.1'
-             url 'https://maven.timo.cloud/repository/TimoCloud-API/cloud/timo/TimoCloud/TimoCloud-API/6.0-beta-1.5.1/'
+             url 'https://maven.timo.cloud/repository/TimoCloud-API/'
          }
     }
 
@@ -74,7 +74,7 @@ dependencies {
     compile project('Support-WorldEdit-6')
     compile project('Support-WorldEdit-7')
     compile 'io.papermc:paperlib:1.0.5'
-    shadow 'TimoCloud:6.0-beta-1.5.1'
+    shadow 'cloud.timo.TimoCloud:TimoCloud-API:TimoCloud:6.0-beta-1.5.1'
 }
 
 shadowJar {
