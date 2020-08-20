@@ -74,7 +74,7 @@ dependencies {
     compile project('Support-WorldEdit-6')
     compile project('Support-WorldEdit-7')
     compile 'io.papermc:paperlib:1.0.5'
-    shadow 'cloud.timo.TimoCloud:TimoCloud-API:TimoCloud:6.0-beta-1.5.1'
+    shadow 'cloud.timo.TimoCloud:TimoCloud-API:TimoCloud-API-6.0-beta-1.5.1'
 }
 
 shadowJar {
