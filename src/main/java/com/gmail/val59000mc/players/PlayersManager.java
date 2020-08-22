@@ -312,7 +312,6 @@ public class PlayersManager{
 		Player player;
 		try {
 			player = uhcPlayer.getPlayer();
-			player.teleport(gm.getLobby().getLoc());
 			clearPlayerInventory(player);
 			player.setGameMode(GameMode.ADVENTURE);
 			player.addPotionEffect(new PotionEffect(PotionEffectType.SATURATION, 99999999, 0), false);
